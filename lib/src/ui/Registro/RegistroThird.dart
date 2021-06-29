@@ -6,18 +6,18 @@ import 'package:app_recoleccion_de_evidencia/src/components/Scaffold/ScaffoldBod
 import 'package:app_recoleccion_de_evidencia/src/components/Inputs/TextInput.dart';
 import 'package:flutter/material.dart';
 
-class RegistroMain extends StatefulWidget {
-  const RegistroMain({Key? key}) : super(key: key);
+class RegistroThird extends StatefulWidget {
+  const RegistroThird({Key? key}) : super(key: key);
 
   @override
-  _RegistroMainState createState() => _RegistroMainState();
+  _RegistroThirdState createState() => _RegistroThirdState();
 }
 
-class _RegistroMainState extends State<RegistroMain> {
+class _RegistroThirdState extends State<RegistroThird> {
   @override
   Widget build(BuildContext context) {
     void handleContinuar =
-        () => Navigator.pushNamed(context, "/RegistroMain/Second");
+        () => Navigator.pushNamed(context, "/RegistroMain/Fourth");
 
     if (true) {
       return Scaffold(
@@ -30,15 +30,15 @@ class _RegistroMainState extends State<RegistroMain> {
                   SizedBox(
                     height: 50,
                   ),
-                  textInput("Nombre:"),
+                  textInput("Correo electronico:"),
                   SizedBox(
                     height: 10,
                   ),
-                  textInput("Apellido:"),
+                  textInput("Provincia:"),
                   SizedBox(
                     height: 10,
                   ),
-                  textInput("DNI:"),
+                  textInput("Ciudad:"),
                   SizedBox(
                     height: 80,
                   ),
@@ -65,15 +65,15 @@ class _RegistroMainState extends State<RegistroMain> {
                   SizedBox(
                     height: 50,
                   ),
-                  textInput("Nombre:"),
+                  textInput("Correo electronico:"),
                   SizedBox(
                     height: 10,
                   ),
-                  textInput("Apellido:"),
+                  textInput("Provincia:"),
                   SizedBox(
                     height: 10,
                   ),
-                  textInput("DNI:"),
+                  textInput("Ciudad:"),
                   SizedBox(
                     height: 80,
                   ),

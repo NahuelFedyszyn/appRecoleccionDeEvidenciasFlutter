@@ -1,23 +1,24 @@
 import 'package:app_recoleccion_de_evidencia/src/components/Buttons/CircularButton.dart';
 import 'package:app_recoleccion_de_evidencia/src/components/Buttons/CircularButtonDisabled.dart';
+import 'package:app_recoleccion_de_evidencia/src/components/Inputs/PasswordInput.dart';
 import 'package:app_recoleccion_de_evidencia/src/components/Labels/Link.dart';
 import 'package:app_recoleccion_de_evidencia/src/components/Labels/MainTitle.dart';
 import 'package:app_recoleccion_de_evidencia/src/components/Scaffold/ScaffoldBody.dart';
 import 'package:app_recoleccion_de_evidencia/src/components/Inputs/TextInput.dart';
 import 'package:flutter/material.dart';
 
-class RegistroMain extends StatefulWidget {
-  const RegistroMain({Key? key}) : super(key: key);
+class RegistroFifth extends StatefulWidget {
+  const RegistroFifth({Key? key}) : super(key: key);
 
   @override
-  _RegistroMainState createState() => _RegistroMainState();
+  _RegistroFifthState createState() => _RegistroFifthState();
 }
 
-class _RegistroMainState extends State<RegistroMain> {
+class _RegistroFifthState extends State<RegistroFifth> {
   @override
   Widget build(BuildContext context) {
     void handleContinuar =
-        () => Navigator.pushNamed(context, "/RegistroMain/Second");
+        () => {}; //Navigator.pushNamed(context, "/RegistroMain/Third");
 
     if (true) {
       return Scaffold(
@@ -30,17 +31,13 @@ class _RegistroMainState extends State<RegistroMain> {
                   SizedBox(
                     height: 50,
                   ),
-                  textInput("Nombre:"),
+                  passwordInput("Contraseña:"),
                   SizedBox(
                     height: 10,
                   ),
-                  textInput("Apellido:"),
+                  passwordInput("Repetir Contraseña"),
                   SizedBox(
-                    height: 10,
-                  ),
-                  textInput("DNI:"),
-                  SizedBox(
-                    height: 80,
+                    height: 150,
                   ),
                   circularButton(
                       "Continuar", "Siguiente", () => handleContinuar),
@@ -65,23 +62,20 @@ class _RegistroMainState extends State<RegistroMain> {
                   SizedBox(
                     height: 50,
                   ),
-                  textInput("Nombre:"),
+                  textInput("Contraseña:"),
                   SizedBox(
                     height: 10,
                   ),
-                  textInput("Apellido:"),
+                  textInput("Repetir Contraseña"),
                   SizedBox(
-                    height: 10,
+                    height: 130,
                   ),
-                  textInput("DNI:"),
-                  SizedBox(
-                    height: 80,
-                  ),
-                  circularButtonDisabled("Continuar", "Siguiente"),
+                  circularButton(
+                      "Continuar", "Siguiente", () => handleContinuar),
                   SizedBox(
                     height: 20,
                   ),
-                  link("Iniciar Sesión")
+                  link("Iniciar Sesión"),
                 ],
               ),
             ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 Widget circularButton(
-        String innerText, String titleText, Function onTapFunction()) =>
+        String innerText, String titleText, Function onTapFunction) =>
     GestureDetector(
-      onTap: onTapFunction,
+      onTap: onTapFunction(),
       child: Container(
         child: Column(
           children: [
@@ -22,10 +22,11 @@ Widget circularButton(
                 ),
               ),
               decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("images/botonPrincipal.png"),
-                      fit: BoxFit.fill),
-                  color: Colors.red),
+                image: DecorationImage(
+                    image: AssetImage("images/botonPrincipal.png"),
+                    fit: BoxFit.fill),
+                //color: Colors.red,
+              ),
               height: 80,
               width: 80,
             ),
